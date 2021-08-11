@@ -56,9 +56,16 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\Spin.cs" />
+    <Compile Include="Assets\Code\PlayerCharacter.cs" />
+    <Compile Include="Assets\Code\SceneController.cs" />
     <Compile Include="Assets\Code\MouseLook.cs" />
     <Compile Include="Assets\Code\FPSInput.cs" />
+    <Compile Include="Assets\Code\Fireball.cs" />
+    <Compile Include="Assets\Code\Spin.cs" />
+    <Compile Include="Assets\Code\ReactiveTarget.cs" />
+    <Compile Include="Assets\Code\RayShooter.cs" />
+    <Compile Include="Assets\Code\WanderingAI.cs" />
+    <Compile Include="Assets\Code\BackAndForth.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
