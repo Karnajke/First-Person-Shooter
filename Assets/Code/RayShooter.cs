@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RayShooter : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class RayShooter : MonoBehaviour
     {
         _camera = GetComponent<Camera>(); //Доступ к другим компонентам, присоединенным к этому же объекту.
 
-        Cursor.lockState = CursorLockMode.Locked; //Скрываем указатель мыши...
-        Cursor.visible = false;                   //...в центре экрана.
+       //Cursor.lockState = CursorLockMode.Locked; //Скрываем указатель мыши...
+       //Cursor.visible = false;                   //...в центре экрана.
     }
 
     void OnGUI()
@@ -26,6 +27,7 @@ public class RayShooter : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) //Реакция на нажатие кнопки мыши.
         {
+            EventSystem.current.IsPointerOverGameObject(); //Проверяем, что GUI не используется.
             Vector3 point = new Vector3(_camera.pixelWidth / 2, _camera.pixelHeight / 2, 0);//Середина экрана — это половина его ширины и высоты
             Ray ray = _camera.ScreenPointToRay(point); //Создание в этой точке луча методом ScreenPointToRay().
             RaycastHit hit;
